@@ -89,3 +89,25 @@ inner class MyWebChromeClient: WebChromeClient() {
 	}
 }
 ~~~
+
+### WebViewClient (기본기능)
+~~~kotlin
+// page loading을 시작했을 때 호출되는 콜백 메소드
+onPageStarted(view: WebView?, url: String?, favicon: Bitmap?)
+// page loading을 끝냈을 때 호출되는 콜백 메소드
+onPageFinished(view: WebView?, url: String?)
+~~~
+
+### WebChromeClient (확장기능)
+~~~kotlin
+// page loading의 프로그레스를 호출
+onProgressChanged(view: WebView?, newProgress: Int)
+~~~
+
+### 안드로이드 statusBar (color , textColor)
+~~~kotlin
+// in themes.xml
+<item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+<!-- Customize your theme here. -->
+<item name="android:windowLightStatusBar">true</item> // 글자색 어둡게
+~~~
